@@ -17,7 +17,7 @@ def post_new(request):
     form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
 
-def post_new(request):
+def post_edit(request):
     if request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
